@@ -1,0 +1,13 @@
+/var/www/bugzilla-3.6/lib/DateTime.pm
+/var/www/bugzilla-3.6/lib/DateTime.xs
+/var/www/bugzilla-3.6/lib/DateTime/Duration.pm
+/var/www/bugzilla-3.6/lib/DateTime/Helpers.pm
+/var/www/bugzilla-3.6/lib/DateTime/Infinite.pm
+/var/www/bugzilla-3.6/lib/DateTime/LeapSecond.pm
+/var/www/bugzilla-3.6/lib/DateTimePP.pm
+/var/www/bugzilla-3.6/lib/DateTimePPExtra.pm
+/var/www/bugzilla-3.6/lib/man/man3/DateTime.3pm
+/var/www/bugzilla-3.6/lib/man/man3/DateTime::Duration.3pm
+/var/www/bugzilla-3.6/lib/man/man3/DateTime::Helpers.3pm
+/var/www/bugzilla-3.6/lib/man/man3/DateTime::Infinite.3pm
+/var/www/bugzilla-3.6/lib/man/man3/DateTime::LeapSecond.3pm

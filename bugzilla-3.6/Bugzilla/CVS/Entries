@@ -1,0 +1,52 @@
+/.cvsignore/1.1/Mon Aug 26 22:24:55 2002//TBUGZILLA-3_6
+/Attachment.pm/1.67/Tue Nov 24 06:09:42 2009//TBUGZILLA-3_6
+/Auth.pm/1.23/Sun Dec 13 21:11:13 2009//TBUGZILLA-3_6
+/Bug.pm/1.308.2.5/Tue Apr  6 03:32:52 2010//TBUGZILLA-3_6
+/BugMail.pm/1.132.2.2/Wed Apr  7 03:31:31 2010//TBUGZILLA-3_6
+/CGI.pm/1.53/Sun Jan 31 17:52:38 2010//TBUGZILLA-3_6
+/Chart.pm/1.18/Mon Aug 17 22:59:52 2009//TBUGZILLA-3_6
+/Classification.pm/1.14.4.1/Wed Apr  7 18:17:32 2010//TBUGZILLA-3_6
+/Comment.pm/1.3.2.2/Sun Mar 14 00:46:27 2010//TBUGZILLA-3_6
+/Component.pm/1.17/Sat Apr 11 23:33:26 2009//TBUGZILLA-3_6
+/Config.pm/1.83/Mon Feb  1 00:47:55 2010//TBUGZILLA-3_6
+/Constants.pm/1.126.2.5/Tue Apr 13 04:56:24 2010//TBUGZILLA-3_6
+/DB.pm/1.132/Thu Dec 31 12:48:21 2009//TBUGZILLA-3_6
+/Error.pm/1.27.2.3/Thu Apr  1 01:17:35 2010//TBUGZILLA-3_6
+/Extension.pm/1.8.2.2/Mon Mar  8 01:33:56 2010//TBUGZILLA-3_6
+/Field.pm/1.47.2.2/Wed Apr  7 01:17:40 2010//TBUGZILLA-3_6
+/Flag.pm/1.106.2.3/Tue Mar 30 22:05:25 2010//TBUGZILLA-3_6
+/FlagType.pm/1.39/Wed Sep 17 03:47:36 2008//TBUGZILLA-3_6
+/Group.pm/1.26.2.1/Sun Feb  7 21:17:24 2010//TBUGZILLA-3_6
+/Hook.pm/1.47.2.6/Fri Apr  2 21:17:49 2010//TBUGZILLA-3_6
+/Install.pm/1.24/Thu Dec 31 12:37:49 2009//TBUGZILLA-3_6
+/JobQueue.pm/1.4/Sun Nov 22 22:24:08 2009//TBUGZILLA-3_6
+/Keyword.pm/1.8/Tue Aug 11 04:34:21 2009//TBUGZILLA-3_6
+/Mailer.pm/1.30/Fri Dec  4 14:46:45 2009//TBUGZILLA-3_6
+/Migrate.pm/1.3/Tue Nov 17 21:16:08 2009//TBUGZILLA-3_6
+/Milestone.pm/1.12/Fri Jan 18 15:56:54 2008//TBUGZILLA-3_6
+/Object.pm/1.45.2.4/Fri Apr  2 21:17:49 2010//TBUGZILLA-3_6
+/Product.pm/1.45.2.2/Wed Apr  7 03:31:31 2010//TBUGZILLA-3_6
+/Search.pm/1.181.2.4/Mon Mar 29 21:32:57 2010//TBUGZILLA-3_6
+/Series.pm/1.20/Sun Oct  4 21:00:25 2009//TBUGZILLA-3_6
+/Status.pm/1.13/Sat Dec 12 21:55:15 2009//TBUGZILLA-3_6
+/Template.pm/1.124.2.5/Thu Apr  8 10:33:08 2010//TBUGZILLA-3_6
+/Token.pm/1.59/Thu Dec 31 12:53:19 2009//TBUGZILLA-3_6
+/Update.pm/1.11.2.2/Sat Feb 20 21:17:24 2010//TBUGZILLA-3_6
+/User.pm/1.204.2.3/Thu Feb 18 00:34:42 2010//TBUGZILLA-3_6
+/Util.pm/1.100.2.2/Fri Apr  2 23:47:51 2010//TBUGZILLA-3_6
+/Version.pm/1.15/Fri Apr 10 09:36:45 2009//TBUGZILLA-3_6
+/WebService.pm/1.20.2.5/Mon Mar  8 07:47:34 2010//TBUGZILLA-3_6
+D/Attachment////
+D/Auth////
+D/Config////
+D/DB////
+D/Field////
+D/Install////
+D/Job////
+D/JobQueue////
+D/Migrate////
+D/Search////
+D/Template////
+D/User////
+D/WebService////
+D/Whine////

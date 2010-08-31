@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<!DOCTYPE bugzilla [
+	<!ELEMENT bugzilla (branch*)>
+	<!ELEMENT branch EMPTY>
+	<!ATTLIST branch id CDATA #REQUIRED
+			 status (closed|old-stable|stable|release-candidate|development) #REQUIRED
+                         vid CDATA #REQUIRED
+			 url CDATA #IMPLIED>
+]>
+<bugzilla>
+    <branch id="2.20" status="closed" vid="2.20.7" url="http://www.bugzilla.org/releases/2.20.7/" date="2008-11-06" />
+    <branch id="2.22" status="closed" vid="2.22.7" url="http://www.bugzilla.org/releases/2.22.7/" date="2009-02-02" />
+    <branch id="3.0" status="closed" vid="3.0.11" url="http://www.bugzilla.org/releases/3.0.11/" date="2010-01-31" />
+    <branch id="3.2" status="old-stable" vid="3.2.7" url="http://www.bugzilla.org/releases/3.2.7/" date="2010-06-24" />
+    <branch id="3.4" status="old-stable" vid="3.4.7" url="http://www.bugzilla.org/releases/3.4.7/" date="2010-06-24" />
+    <branch id="3.6" status="stable" vid="3.6.1" url="http://www.bugzilla.org/releases/3.6.1/" date="2010-06-24" />
+    <branch id="4.0" status="development" vid="3.7.2" url="http://www.bugzilla.org/releases/4.0/" date="2010-07-05" />
+</bugzilla>

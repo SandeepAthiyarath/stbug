@@ -1,0 +1,12 @@
+/var/www/bugzilla-3.6/lib/PatchReader.pm
+/var/www/bugzilla-3.6/lib/PatchReader/AddCVSContext.pm
+/var/www/bugzilla-3.6/lib/PatchReader/Base.pm
+/var/www/bugzilla-3.6/lib/PatchReader/CVSClient.pm
+/var/www/bugzilla-3.6/lib/PatchReader/DiffPrinter/raw.pm
+/var/www/bugzilla-3.6/lib/PatchReader/DiffPrinter/template.pm
+/var/www/bugzilla-3.6/lib/PatchReader/FilterPatch.pm
+/var/www/bugzilla-3.6/lib/PatchReader/FixPatchRoot.pm
+/var/www/bugzilla-3.6/lib/PatchReader/NarrowPatch.pm
+/var/www/bugzilla-3.6/lib/PatchReader/PatchInfoGrabber.pm
+/var/www/bugzilla-3.6/lib/PatchReader/Raw.pm
+/var/www/bugzilla-3.6/lib/man/man3/PatchReader.3pm

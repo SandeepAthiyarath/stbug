@@ -1,0 +1,592 @@
+[%# 1.0@bugzilla.org %]
+[%# The contents of this file are subject to the Mozilla Public
+  # License Version 1.1 (the "License"); you may not use this file
+  # except in compliance with the License. You may obtain a copy of
+  # the License at http://www.mozilla.org/MPL/
+  #
+  # Software distributed under the License is distributed on an "AS
+  # IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or
+  # implied. See the License for the specific language governing
+  # rights and limitations under the License.
+  #
+  # The Original Code is the Bugzilla Bug Tracking System.
+  #
+  # The Initial Developer of the Original Code is Netscape Communications
+  # Corporation. Portions created by Netscape are
+  # Copyright (C) 1998 Netscape Communications Corporation. All
+  # Rights Reserved.
+  #
+  # Contributor(s): Gervase Markham <gerv@gerv.net>
+  #                 Ville Skyttä <ville.skytta@iki.fi>
+  #                 Shane H. W. Travis <travis@sedsystems.ca>
+  #%]
+
+[% PROCESS global/variables.none.tmpl %]
+[% PROCESS "global/field-descs.none.tmpl" %]
+
+[% product_name = product FILTER html %]
+[% PROCESS global/header.html.tmpl
+  title = "Enter $terms.Bug: $product_name"
+  onload="set_assign_to();"
+%]
+[% USE Bugzilla %]
+
+<script type="text/javascript">
+<!--
+
+var initialowners = new Array([% component_.size %]);
+var last_initialowner;
+var initialcclists = new Array([% component_.size %]);
+var last_initialcclists;
+var components = new Array([% component_.size %]);
+var components = new Array([% component_.size %]);
+[% IF Param("useqacontact") %]
+    var initialqacontacts = new Array([% component_.size %]);
+    var last_initialqacontact;
+[% END %]
+[% count = 0 %]
+[%- FOREACH c = component_ %]
+    components[[% count %]] = "[% c.name FILTER js %]";
+    initialowners[[% count %]] = "[% c.initialowner FILTER js %]";
+    [% IF Param("useqacontact") %]
+    initialqacontacts[[% count %]] = "[% c.initialqacontact FILTER js %]";
+    [% END %]
+    initialcclists[[% count %]] = "[% c.initialcclist FILTER js %]";
+    [% count = count + 1 %]
+[%- END %]
+
+function set_assign_to() {
+    // Based on the selected component, fill the "Assign To:" field
+    // with the default component owner, and the the "QA Contact:" field
+    // with the default QA Contact.
+    var form = document.Create;
+    var assigned_to = form.assigned_to.value;
+    var qa_contact = form.qa_contact.value;
+    var groupcc = form.groupcc.value;
+
+    var index = -1;
+    if (form.component.type == 'select-one') {
+        index = form.component.selectedIndex;
+    } else if (form.component.type == 'hidden') {
+        // Assume there is only one component in the list
+        index = 0;
+   }
+
+    if (index != '-1') {
+        var owner = initialowners[index];
+        var component = components[index];
+        var contact = initialqacontacts[index];
+	var cclist = initialcclists[index];
+
+	form.assigned_to.value =  owner;
+	form.qa_contact.value = contact;
+	form.groupcc.value = cclist;
+    }
+}
+
+
+//       if (assigned_to == last_initialowner
+//           || assigned_to == owner
+//           || assigned_to == '') {
+//            last_initialowner = owner;
+//       }
+//        [% IF Param("useqacontact") %]
+//            if (qa_contact == last_initialqacontact
+//                || qa_contact == contact
+//                || qa_contact == '') {
+//                  last_initialqacontact = contact;
+//            }
+//        [% END %]
+//	if (groupcc == last_initialcclist
+//		|| groupcc == cclist
+//		|| groupcc =='') {
+//		last_initialcclist = cclist;
+//	}
+-->
+</script>
+
+<form name="Create" id="Create" method="post" action="post_bug.cgi">
+<input type="hidden" name="product" value="[% product FILTER html %]">
+
+<table cellspacing="2" cellpadding="0" border="0">
+
+<!--  <tr>
+    <td><br></td>
+  </tr>
+-->
+  <tr>
+    <td></td>
+    <td colspan="3">
+    [%# Migration note: The following file corresponds to the old Param
+      # 'entryheaderhtml'
+      #%]
+    [% INCLUDE 'bug/create/user-message.html.tmpl' %]
+    </td>
+  </tr>
+<!--
+  <tr>
+    <td><br></td>
+  </tr>
+-->
+
+  <tr>
+    <td align="right" valign="top"><strong>Reporter:</strong></td>
+    <td valign="top">[% Bugzilla.user.login FILTER html %]</td>
+
+    <td align="right" valign="top"><strong>Product:</strong></td>
+    <td valign="top">[% product FILTER html %]</td>
+  </tr>
+
+  [%# We can't use the select block in these two cases for various reasons. %]
+  <tr>
+    <td align="right" valign="top">
+      <strong>Releases Affected:</strong>
+    </td>
+    <td>
+      <select name="relaffected" size="5" multiple="multiple">
+        [%- FOREACH v = relaffected %]
+          <option value="[% v FILTER html %]"
+            [% " selected=\"selected\"" IF v == default.version %]>[% v FILTER html -%]
+          </option>
+        [%- END %]
+      </select>
+    </td>
+
+    <td align="right" valign="top">
+      <strong>
+        <a href="describecomponents.cgi?product=[% product FILTER url_quote %]">
+          Component</a>:
+      </strong>
+    </td>
+    <td>
+      <select name="component" onchange="set_assign_to();" size="5">
+        [%- FOREACH c = component_ %]
+          <option value="[% c.name FILTER html %]"
+            [% " selected=\"selected\"" IF c.name == default.component_ %]>
+            [% c.name FILTER html -%]
+          </option>
+        [%- END %]
+      </select>
+    </td>
+  </tr>
+
+<!--
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="3"></td>
+  </tr>
+-->
+
+  <tr>
+    [% sel = { description => 'Platform', name => 'rep_platform' } %]
+    [% INCLUDE select %]
+
+    [% sel = { description => 'Class', name => 'op_sys' } %]
+    [% INCLUDE select %]
+  </tr>
+
+
+  <tr>
+  [% IF Param('letsubmitterchoosepriority') %]
+    [% sel = { description => 'Priority', name => 'priority' } %]
+    [% INCLUDE select %]
+  [% ELSE %]
+    <input type="hidden" name="priority"
+           value="[% default.priority FILTER html %]">
+  [% END %]
+
+  [% sel = { description => 'Severity', name => 'bug_severity' } %]
+  [% INCLUDE select %]
+  </tr>
+
+  [% IF Param('usetargetmilestone') && Param('letsubmitterchoosemilestone') %]
+    <tr>
+    [% sel = { description => 'Target Milestone', name => 'target_milestone' } %]
+    [% INCLUDE select %]
+    <td colspan="2"></td>
+    </tr>
+  [% END %]
+
+<!-->
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="3"></td>
+  </tr>
+-->
+
+<!--  <tr>
+[% IF bug_status.size <= 1 %]
+  <input type="hidden" name="bug_status" 
+         value="[% default.bug_status FILTER html %]">
+    <td align="right" valign="top"><strong>Initial State:</strong></td>
+    <td valign="top">[% status_descs.${default.bug_status} FILTER html %]</td>
+[% ELSE %]
+    [% sel = { description => 'Initial State', name => 'bug_status' } %]
+    [% INCLUDE select %]
+[% END %]
+    <td colspan="2"></td>
+  </tr>
+-->
+
+  <tr>
+    [% sel = { description => 'Test Type', name => 'testtype' } %]
+    [% INCLUDE select %]
+  </tr>
+
+  <tr>
+    <td align="right">
+      <strong>
+        <a href="page.cgi?id=fields.html#assigned_to">Assign To</a>:
+      </strong>
+    </td>
+    <td colspan="3">
+      [% INCLUDE global/userselect.html.tmpl
+         name => "assigned_to"
+         value => assigned_to
+         disabled => assigned_to_disabled
+         size => 32
+	 multiple => 3
+         emptyok => 1
+       %]
+      <noscript>(Leave blank to assign to component's default assignee)</noscript>
+    </td>
+  </tr>
+  
+[% IF Param("useqacontact") %]
+    <tr>
+      <td align="right"><strong>QA Contact:</strong></td>
+      <td colspan="3">
+      [% INCLUDE global/userselect.html.tmpl
+         name => "qa_contact"
+         value => qa_contact
+         disabled => qa_contact_disabled
+         size => 32
+	 multiple => 3
+         emptyok => 1
+       %]
+        <noscript>(Leave blank to assign to default qa contact)</noscript>
+      </td>
+    </tr>
+[% END %]
+
+  <tr>
+    <td align="right"><strong>Cc:</strong></td>
+    <td colspan="3">
+      [% INCLUDE global/userselect.html.tmpl
+         name => "cc"
+         value => cc
+         disabled => cc_disabled
+         size => 45
+         multiple => 3
+       %]
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="right"><strong>Group Cc:</strong></td>
+    <td colspan="3">
+      <input name="groupcc" size="60">
+    </td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="3"></td>
+  </tr>
+
+[% IF UserInGroup(Param('timetrackinggroup')) %]
+  <tr>
+    <td align="right"><strong>Estimated Hours:</strong></td>
+    <td colspan="3">
+      <input name="estimated_time" size="6" maxlength="6" value="0.0">
+    </td>
+  </tr>
+  <tr>
+    <td align="right"><strong>Deadline:</strong></td>
+    <td colspan="3">
+      <input name="deadline" size="10" maxlength="10" value="[% deadline FILTER html %]">
+      <small>(YYYY-MM-DD)</small>
+    </td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="3"></td>
+  </tr>
+[% END %]
+
+[% IF Param("usebugaliases") %]
+  <tr>
+    <td align="right"><strong>Alias:</strong></td>
+    <td colspan="3">
+      <input name="alias" size="20">
+    </td>
+  </tr>
+[% END %]
+
+  <tr>
+    <td align="right"><strong>Build ID:</strong></td>
+    <td colspan="3">
+      <input name="buildid" size="60"> <br> example: main (2007011105)
+    </td>
+  </tr>
+<!--
+  <tr>
+    <td align="right"><strong>Coredump:</strong></td>
+    <td colspan="3">
+      <input name="coredump" size="60"> <br> example: /auto/build/builder/main/2007052802/qnx/cb/mc/dump/salvador-mc/slot0/smid.core.gz
+    </td>
+  </tr>
+-->
+
+  <tr>
+    <td align="right"><strong>Summary:</strong></td>
+    <td colspan="3">
+      <input name="short_desc" size="60" value="[% short_desc FILTER html %]">
+    </td>
+  </tr>
+  <tr>
+    <td align="right"><strong>Essential Information:</strong></td>
+    <td colspan="3">
+    <table border="0" cellspaceing="1" cellpadding="1" bgcolor="red"><tr><td bgcolor="red"><table bgcolor="white">
+	<tr><td>
+	It is imperative to enter the following information into the <strong>Description</strong>
+	field. If the information isn't entered the Problem Report is considered incomplete.
+	<ol>
+	  <li><big><b>Test Plan and Case ID</b></big><br>
+	  If no Test Plan and Case ID, then the test description.
+	  </li>
+	  <li>Steps to reproduce. In the case of GLC-R, whether the issue was
+	  seen with multiple faults / single fault / double fault scenarios.
+	  </li>
+	  <li>Config file of the devices used for testing
+	  </li>
+	  <li>Test topology
+	  </li>
+	  <li>Log/debug files
+	  </li>
+	  <li>Core dump location/trace
+	  </li>
+	  <li>SSX counter information, as referred to by this page-
+	  </li>
+	  <a href="http://www-int.stoke.com/cgi-bin/wiki.pl/Drop_Counters_on_SSX" target="_blank">
+	  http://www-int.stoke.com/cgi-bin/wiki.pl/Drop_Counters_on_SSX</a>
+	  <li>Consistency of reproducing the problem. 
+	  </li>
+	  <li>Any workarounds present.
+	  </li>
+	  <li>If it is a blocker the test cases / scenarios blocked by the bug.
+	  </li>
+	  <li>Any discussion / comments by developer about this problem if
+	  available e.g. email threads.(optional)
+	  </li>
+	  <li>Whether the test-setup is simple ( no dependency on tools used
+	  primarily by QA) for development to reproduce on their setup.
+	  </li>
+	  <li>Reference documents e.g PRD,RFC, standards
+	  </li>
+	  <li>Test -Case -ID from the test plan.
+	  </li>
+	  <li>Expected behavior of the DUT and the deviation seen from the norm.
+	  </li>
+	</ol>
+	</td></tr></table>
+	</td></tr></table>
+    <br>
+    </td>
+  </tr>
+  <tr><td align="right" valign="top"><strong>Description:</strong></td>
+    <td colspan="3">
+      <textarea name="comment" rows="20" cols="[% constants.COMMENT_COLS FILTER none %]">
+        [% IF cloned_bug_id %]
++++ This [% terms.bug %] was initially created as a clone of [% terms.Bug %] #[% cloned_bug_id %] +++
+
+
+        [% END %]
+1. Test Plan and Case ID
+
+2. Steps to reproduce. In case of GLC-R, whether the issue was seen with
+   multiple faults / single fault / double fault scenarios.
+
+3. Config file of the devices used for testing
+
+4. Test topology
+
+5. Log/debug files
+
+6. Core dump location/trace
+
+7. SSX counter information
+
+8. Consistency reproducing the problem. 
+
+9. Any workarounds present.
+
+10. If it is a blocker the test cases / scenarios blocked by the bug.
+
+11. Any discussion / comments by the developer about this problem, if
+   available. (e.g. email threads.(optional))
+
+12. Whether the test-setup is simple (no dependency on tools used
+    primarily by QA) for development to reproduce on their setup.
+
+13. Reference documents e.g PRD,RFC, standards
+
+14. Test-Case-ID from the test plan.
+
+15. Expected behavior of the DUT and the deviation seen from the norm.
+
+        [% comment FILTER html %]</textarea>
+      <br>
+    </td>
+  </tr>
+
+  [% IF Param("insidergroup") && UserInGroup(Param("insidergroup")) %]
+    <tr>
+      <td></td>
+      <td colspan="3">
+        &nbsp;&nbsp;
+        <input type="checkbox" id="commentprivacy" name="commentprivacy"
+          [% " checked=\"checked\"" IF commentprivacy %]>
+        <label for="commentprivacy">
+          Initial Description is Private
+        </label>
+      </td>
+    </tr>
+  [% ELSE %]
+    <input type="hidden" name="commentprivacy" value="0">
+  [% END %]
+
+  [% IF UserInGroup('editbugs') %]
+    [% IF use_keywords %]
+      <tr>
+        <td align="right" valign="top">
+          <strong>
+            <a href="describekeywords.cgi">Keywords</a>:
+          </strong>
+        </td>
+        <td colspan="3">
+          <input name="keywords" size="60" value="[% keywords FILTER html %]"> (optional)
+        </td>
+      </tr>
+    [% END %]
+<!--
+    <tr>
+      <td align="right">
+        <strong>Depends on:</strong>
+      </td>
+      <td>
+        <input name="dependson" accesskey="d" value="[% dependson FILTER html %]">
+      </td>
+    </tr>
+    <tr>
+      <td align="right">
+        <strong>Blocks:</strong>
+      </td>
+      <td>
+        <input name="blocked" accesskey="b" value="[% blocked FILTER html %]">
+      </td>
+    </tr>
+-->
+  [% END %]
+
+  <tr>
+    <td></td>
+    <td colspan="3">
+    [% IF group.size %]
+      <br>
+        <strong>
+          Only users in all of the selected groups can view this [% terms.bug %]:
+        </strong>
+      <br>
+      <font size="-1">
+        (Leave all boxes unchecked to make this a public [% terms.bug %].)
+      </font>
+      <br>
+      <br>
+
+      <!-- Checkboxes -->
+      [% FOREACH g = group %]
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" id="bit-[% g.bit %]"
+          name="bit-[% g.bit %]" value="1"
+          [% " checked=\"checked\"" IF g.checked %]>
+          <label for="bit-[% g.bit %]">[% g.description %]</label><br>
+      [% END %]
+      <br>
+    [% END %]
+    </td>
+  </tr>
+
+  [%# Form controls for entering additional data about the bug being created. %]
+  [% Hook.process("form") %]
+
+  <tr>
+    <td></td>
+    <td colspan="3">
+      <input type="submit" value="    Commit    "
+             onclick="if (this.form.short_desc.value == '')
+             { alert('Please enter a summary sentence for this [% terms.bug %].');
+               return false; } return true;">
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="submit" name="maketemplate"
+             value="Remember values as bookmarkable template">
+    </td>
+  </tr>
+
+[% UNLESS (Param('defaultplatform') && Param('defaultopsys')) %]
+  <tr>
+    <td></td>
+    <td colspan="3">
+      <br>
+      We've made a guess at your
+  [% IF Param('defaultplatform') %]
+      operating system. Please check it
+  [% ELSIF Param('defaultopsys') %]
+      platform. Please check it
+  [% ELSE %]
+      operating system and platform. Please check them
+  [% END %]
+      and, if we got it wrong, email
+      [%+ Param('maintainer') %].
+    </td>
+  </tr>
+[% END %]
+
+  </table>
+  <input type="hidden" name="form_name" value="enter_bug">
+</form>
+
+[%# Links or content with more information about the bug being created. %]
+[% Hook.process("end") %]
+
+[% PROCESS global/footer.html.tmpl %]
+
+[%############################################################################%]
+[%# Block for SELECT fields                                                  #%]
+[%############################################################################%]
+
+[% BLOCK select %]
+  [% IF sel.description %]
+  <td align="right">
+    <strong>
+      <a href="page.cgi?id=fields.html#[% sel.name %]">
+        [% sel.description %]</a>:
+    </strong>
+  </td>
+  [% END %]
+
+  <td>
+    <select name="[% sel.name %]">
+    [%- FOREACH x = ${sel.name} %]
+      <option value="[% x FILTER html %]"
+        [% " selected=\"selected\"" IF x == default.${sel.name} %]>
+        [% IF sel.name == "bug_status" %]
+          [% status_descs.$x FILTER html %]
+        [% ELSE %]
+          [% x FILTER html %]
+        [% END %]</option>
+    [% END %]
+    </select>
+  </td>
+[% END %]

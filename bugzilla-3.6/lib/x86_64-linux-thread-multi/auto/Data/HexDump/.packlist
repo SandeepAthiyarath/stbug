@@ -1,0 +1,3 @@
+/var/www/bugzilla-3.6/lib/Data/HexDump.pm
+/var/www/bugzilla-3.6/lib/bin/hexdump
+/var/www/bugzilla-3.6/lib/man/man3/Data::HexDump.3pm

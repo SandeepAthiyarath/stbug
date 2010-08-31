@@ -1,0 +1,814 @@
+=head2 Mon May 17 23:31:37 2010: C<Module> L<DateTime|DateTime>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: >
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:33:44 2010: C<Module> L<Chart|Chart>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.4.1>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:34:21 2010: C<Module> L<Template::GD|Template::GD>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.66>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:34:46 2010: C<Module> L<GD::Graph|GD::Graph>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.44>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:35:27 2010: C<Module> L<XML::Twig|XML::Twig>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 3.35>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:35:59 2010: C<Module> L<XML::Twig|XML::Twig>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 3.35>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:37:48 2010: C<Module> L<XML::Twig|XML::Twig>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 3.35>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:38:19 2010: C<Module> L<PatchReader|PatchReader>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.9.5>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:40:04 2010: C<Module> L<ExtUtils::MakeMaker|ExtUtils::MakeMaker>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 6.56>
+
+=item *
+
+C<EXE_FILES: bin/instmodsh>
+
+=back
+
+=head2 Mon May 17 23:40:09 2010: C<Module> L<Convert::ASN1|Convert::ASN1>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.22>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:40:12 2010: C<Module> L<Net::LDAP|Net::LDAP>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.4001>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:40:50 2010: C<Module> L<Digest::HMAC|Digest::HMAC>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.02>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:40:52 2010: C<Module> L<Authen::SASL|Authen::SASL>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.1401>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:41:29 2010: C<Module> L<Data::HexDump|Data::HexDump>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.02>
+
+=item *
+
+C<EXE_FILES: hexdump>
+
+=back
+
+=head2 Mon May 17 23:41:40 2010: C<Module> L<Authen::Radius|Authen::Radius>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.17>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:42:14 2010: C<Module> L<Task::Weaken|Task::Weaken>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.03>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:42:17 2010: C<Module> L<SOAP::Lite|SOAP::Lite>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.711>
+
+=item *
+
+C<EXE_FILES: bin/SOAPsh.pl bin/XMLRPCsh.pl bin/stubmaker.pl>
+
+=back
+
+=head2 Mon May 17 23:42:50 2010: C<Module> L<SOAP::Lite|SOAP::Lite>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.711>
+
+=item *
+
+C<EXE_FILES: bin/SOAPsh.pl bin/XMLRPCsh.pl bin/stubmaker.pl>
+
+=back
+
+=head2 Mon May 17 23:43:25 2010: C<Module> L<SOAP::Lite|SOAP::Lite>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.711>
+
+=item *
+
+C<EXE_FILES: bin/SOAPsh.pl bin/XMLRPCsh.pl bin/stubmaker.pl>
+
+=back
+
+=head2 Mon May 17 23:46:09 2010: C<Module> L<JSON|JSON>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.21>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:46:10 2010: C<Module> L<JSON::RPC|JSON::RPC>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.96>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:46:39 2010: C<Module> L<Test::Taint|Test::Taint>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.04>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:47:06 2010: C<Module> L<HTML::Scrubber|HTML::Scrubber>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.08>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:47:46 2010: C<Module> L<Email::MIME::Attachment::Stripper|Email::MIME::Attachment::Stripper>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.316>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:48:08 2010: C<Module> L<Email::Abstract|Email::Abstract>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 3.001>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:48:09 2010: C<Module> L<Email::Reply|Email::Reply>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.202>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:48:48 2010: C<Module> L<Test::Simple|Test::Simple>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.94>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:48:57 2010: C<Module> L<Sub::Uplevel|Sub::Uplevel>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.22>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:48:58 2010: C<Module> L<Test::Exception|Test::Exception>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.29>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:48:59 2010: C<Module> L<Class::Trigger|Class::Trigger>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.14>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:49:00 2010: C<Module> L<Class::Data::Inheritable|Class::Data::Inheritable>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.08>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:49:01 2010: C<Module> L<Class::Accessor|Class::Accessor>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.34>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:49:03 2010: C<Module> L<Data::ObjectDriver|Data::ObjectDriver>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.07>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:49:27 2010: C<Module> L<TheSchwartz|TheSchwartz>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.10>
+
+=item *
+
+C<EXE_FILES: bin/schwartzmon>
+
+=back
+
+=head2 Mon May 17 23:49:51 2010: C<Module> L<File::Flock|File::Flock>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2008.01>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:49:53 2010: C<Module> L<File::Slurp|File::Slurp>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 9999.13>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon May 17 23:49:54 2010: C<Module> L<Daemon::Generic|Daemon::Generic>
+
+=over 4
+
+=item *
+
+C<installed into: /var/www/bugzilla-3.6/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.61>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+

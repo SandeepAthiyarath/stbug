@@ -1,0 +1,12 @@
+/var/www/bugzilla-3.6/lib/JSON.pm
+/var/www/bugzilla-3.6/lib/JSON/PP.pm
+/var/www/bugzilla-3.6/lib/JSON/PP/Boolean.pm
+/var/www/bugzilla-3.6/lib/JSON/PP5005.pm
+/var/www/bugzilla-3.6/lib/JSON/PP56.pm
+/var/www/bugzilla-3.6/lib/JSON/PP58.pm
+/var/www/bugzilla-3.6/lib/man/man3/JSON.3pm
+/var/www/bugzilla-3.6/lib/man/man3/JSON::PP.3pm
+/var/www/bugzilla-3.6/lib/man/man3/JSON::PP5005.3pm
+/var/www/bugzilla-3.6/lib/man/man3/JSON::PP56.3pm
+/var/www/bugzilla-3.6/lib/man/man3/JSON::PP58.3pm
+/var/www/bugzilla-3.6/lib/man/man3/JSON::PP::Boolean.3pm

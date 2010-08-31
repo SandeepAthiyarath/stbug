@@ -1,0 +1,16 @@
+/var/www/bugzilla-3.6/lib/JSON/RPC.pm
+/var/www/bugzilla-3.6/lib/JSON/RPC/Client.pm
+/var/www/bugzilla-3.6/lib/JSON/RPC/Procedure.pm
+/var/www/bugzilla-3.6/lib/JSON/RPC/Server.pm
+/var/www/bugzilla-3.6/lib/JSON/RPC/Server/Apache2.pm
+/var/www/bugzilla-3.6/lib/JSON/RPC/Server/CGI.pm
+/var/www/bugzilla-3.6/lib/JSON/RPC/Server/Daemon.pm
+/var/www/bugzilla-3.6/lib/JSONRPC.pm
+/var/www/bugzilla-3.6/lib/man/man3/JSON::RPC.3pm
+/var/www/bugzilla-3.6/lib/man/man3/JSON::RPC::Client.3pm
+/var/www/bugzilla-3.6/lib/man/man3/JSON::RPC::Procedure.3pm
+/var/www/bugzilla-3.6/lib/man/man3/JSON::RPC::Server.3pm
+/var/www/bugzilla-3.6/lib/man/man3/JSON::RPC::Server::Apache2.3pm
+/var/www/bugzilla-3.6/lib/man/man3/JSON::RPC::Server::CGI.3pm
+/var/www/bugzilla-3.6/lib/man/man3/JSON::RPC::Server::Daemon.3pm
+/var/www/bugzilla-3.6/lib/man/man3/JSONRPC.3pm

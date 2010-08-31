@@ -1,0 +1,14 @@
+/var/www/bugzilla-3.6/lib/Email/Abstract.pm
+/var/www/bugzilla-3.6/lib/Email/Abstract/EmailMIME.pm
+/var/www/bugzilla-3.6/lib/Email/Abstract/EmailSimple.pm
+/var/www/bugzilla-3.6/lib/Email/Abstract/MIMEEntity.pm
+/var/www/bugzilla-3.6/lib/Email/Abstract/MailInternet.pm
+/var/www/bugzilla-3.6/lib/Email/Abstract/MailMessage.pm
+/var/www/bugzilla-3.6/lib/Email/Abstract/Plugin.pm
+/var/www/bugzilla-3.6/lib/man/man3/Email::Abstract.3pm
+/var/www/bugzilla-3.6/lib/man/man3/Email::Abstract::EmailMIME.3pm
+/var/www/bugzilla-3.6/lib/man/man3/Email::Abstract::EmailSimple.3pm
+/var/www/bugzilla-3.6/lib/man/man3/Email::Abstract::MIMEEntity.3pm
+/var/www/bugzilla-3.6/lib/man/man3/Email::Abstract::MailInternet.3pm
+/var/www/bugzilla-3.6/lib/man/man3/Email::Abstract::MailMessage.3pm
+/var/www/bugzilla-3.6/lib/man/man3/Email::Abstract::Plugin.3pm

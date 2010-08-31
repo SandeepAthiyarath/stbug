@@ -1,0 +1,8 @@
+/var/www/bugzilla-3.6/lib/Convert/ASN1.pm
+/var/www/bugzilla-3.6/lib/Convert/ASN1.pod
+/var/www/bugzilla-3.6/lib/Convert/ASN1/Debug.pm
+/var/www/bugzilla-3.6/lib/Convert/ASN1/IO.pm
+/var/www/bugzilla-3.6/lib/Convert/ASN1/_decode.pm
+/var/www/bugzilla-3.6/lib/Convert/ASN1/_encode.pm
+/var/www/bugzilla-3.6/lib/Convert/ASN1/parser.pm
+/var/www/bugzilla-3.6/lib/man/man3/Convert::ASN1.3pm

@@ -1,0 +1,7 @@
+/var/www/bugzilla-3.6/lib/Daemon/Generic.pm
+/var/www/bugzilla-3.6/lib/Daemon/Generic.pod
+/var/www/bugzilla-3.6/lib/Daemon/Generic/Event.pm
+/var/www/bugzilla-3.6/lib/Daemon/Generic/While1.pm
+/var/www/bugzilla-3.6/lib/man/man3/Daemon::Generic.3pm
+/var/www/bugzilla-3.6/lib/man/man3/Daemon::Generic::Event.3pm
+/var/www/bugzilla-3.6/lib/man/man3/Daemon::Generic::While1.3pm

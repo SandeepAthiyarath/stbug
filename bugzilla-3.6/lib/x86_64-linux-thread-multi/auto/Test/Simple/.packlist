@@ -1,0 +1,16 @@
+/var/www/bugzilla-3.6/lib/Test/Builder.pm
+/var/www/bugzilla-3.6/lib/Test/Builder/IO/Scalar.pm
+/var/www/bugzilla-3.6/lib/Test/Builder/Module.pm
+/var/www/bugzilla-3.6/lib/Test/Builder/Tester.pm
+/var/www/bugzilla-3.6/lib/Test/Builder/Tester/Color.pm
+/var/www/bugzilla-3.6/lib/Test/More.pm
+/var/www/bugzilla-3.6/lib/Test/Simple.pm
+/var/www/bugzilla-3.6/lib/Test/Tutorial.pod
+/var/www/bugzilla-3.6/lib/man/man3/Test::Builder.3pm
+/var/www/bugzilla-3.6/lib/man/man3/Test::Builder::IO::Scalar.3pm
+/var/www/bugzilla-3.6/lib/man/man3/Test::Builder::Module.3pm
+/var/www/bugzilla-3.6/lib/man/man3/Test::Builder::Tester.3pm
+/var/www/bugzilla-3.6/lib/man/man3/Test::Builder::Tester::Color.3pm
+/var/www/bugzilla-3.6/lib/man/man3/Test::More.3pm
+/var/www/bugzilla-3.6/lib/man/man3/Test::Simple.3pm
+/var/www/bugzilla-3.6/lib/man/man3/Test::Tutorial.3pm

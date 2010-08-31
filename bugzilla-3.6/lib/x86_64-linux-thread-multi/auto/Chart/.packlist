@@ -1,0 +1,16 @@
+/var/www/bugzilla-3.6/lib/Chart.pod
+/var/www/bugzilla-3.6/lib/Chart/Bars.pm
+/var/www/bugzilla-3.6/lib/Chart/Base.pm
+/var/www/bugzilla-3.6/lib/Chart/Composite.pm
+/var/www/bugzilla-3.6/lib/Chart/Direction.pm
+/var/www/bugzilla-3.6/lib/Chart/ErrorBars.pm
+/var/www/bugzilla-3.6/lib/Chart/HorizontalBars.pm
+/var/www/bugzilla-3.6/lib/Chart/Lines.pm
+/var/www/bugzilla-3.6/lib/Chart/LinesPoints.pm
+/var/www/bugzilla-3.6/lib/Chart/Mountain.pm
+/var/www/bugzilla-3.6/lib/Chart/Pareto.pm
+/var/www/bugzilla-3.6/lib/Chart/Pie.pm
+/var/www/bugzilla-3.6/lib/Chart/Points.pm
+/var/www/bugzilla-3.6/lib/Chart/Split.pm
+/var/www/bugzilla-3.6/lib/Chart/StackedBars.pm
+/var/www/bugzilla-3.6/lib/man/man3/Chart.3pm

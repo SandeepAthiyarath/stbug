@@ -1,0 +1,6 @@
+/var/www/bugzilla-3.6/lib/Digest/HMAC.pm
+/var/www/bugzilla-3.6/lib/Digest/HMAC_MD5.pm
+/var/www/bugzilla-3.6/lib/Digest/HMAC_SHA1.pm
+/var/www/bugzilla-3.6/lib/man/man3/Digest::HMAC.3pm
+/var/www/bugzilla-3.6/lib/man/man3/Digest::HMAC_MD5.3pm
+/var/www/bugzilla-3.6/lib/man/man3/Digest::HMAC_SHA1.3pm
