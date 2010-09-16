@@ -13,8 +13,6 @@ mysql -u root -pSys1adm -e 'create database bugs';
 echo "Restore the bugs database from old production"
 mysql -u root -pSys1adm bugs < bugs.dump;
 # Grant privilages
-B
-B
 echo "Giving the privilages "
 mysql -u root -pSys1adm -e 'grant all privileges on bugs.* to 'bugs'@'localhost' identified by 'bugs'';
 # Call the  Initial DBI script
